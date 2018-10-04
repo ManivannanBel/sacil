@@ -112,8 +112,15 @@ body {font-family: "Lato", sans-serif;}
     }
     usort($date_array, "date_sort");
  //   print_r($date_array);
-    $older_date = $date_array[0];
-    $newer_date = $date_array[sizeof($date_array)-1];
+    if(!empty($_POST['activity_fromdate']))
+      $older_date = $_POST['activity_fromdate'];
+    else
+      $older_date = $date_array[0];
+    
+    if(!empty($_POST['activity_todate']))
+      $newer_date = $_POST['activity_todate'];
+    else
+      $newer_date = $date_array[sizeof($date_array)-1];
     
   for ($date = $newer_date; (strtotime($date))>=(strtotime($older_date)); $date=date('Y-m-d',strtotime("-1 day", strtotime($date)))){
     $res_cb=mysqli_query($conn,"select * from cb where clis_cms_id='".$_SESSION['loggeduserid_original']."' AND date='".$date."';");

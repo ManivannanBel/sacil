@@ -97,8 +97,19 @@ include("header.php");
   <div class="rows">
     <?php
     
-        if(isset($_SESSION['loggeduserid_original']))
+        if(isset($_SESSION['loggeduserid_original'])){
+          ?>
+            <form name="activity_from_to_date" method="post">
+              <table>
+                <th>FROM: </th><td><input type="date" name="activity_fromdate" placeholder="DD-MM-YYYY" class="form-control"></td>
+                <th>TO: </th><td><input type="date" name="activity_todate" placeholder="DD-MM-YYYY" class="form-control"></td>
+                <td><span class="icon-input-btn"><span class="glyphicon glyphicon-search"></span> <input type="submit" class="btn btn-success btn-md" value="Search" name="activity_from_to_date_submit"></span>
+              </table>
+            </form>
+            <?php
+            //$_POST['activity_fromdate']
             include("activity.php");
+        }
         else
           echo "Not available for controllers";
     ?>
