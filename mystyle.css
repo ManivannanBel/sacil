@@ -1,0 +1,96 @@
+.unlogged_jumbo{
+    height:400;
+    padding-top: 30px; 
+    padding-bottom: 30px;
+    margin-bottom: 0px; 
+    color: inherit;
+    background-color: #eee;
+
+}
+.myjumbotron{
+  background:linear-gradient(rgba(27, 26, 26, 0.9), rgba(0, 0, 0, 0.55)),
+                rgba(0,0,0,0.55) url('pic/wall 2.jpg') no-repeat center;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 2px 2px 4px #98974982;
+}
+
+input,textarea{
+  text-transform:uppercase;
+}
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+
+#clr1{
+    background-color: #eff3cbbd;
+    color: #af4d4d;
+}
+#clr2{
+  background-color: #d8cbf373;
+  color: #734daf;
+}
+#clr3{
+  background-color: #cbf3dda8;
+  color: #396d6f;
+}
+#status_of_form{
+  background-color: #b3b184;
+  color: white;
+  padding:1px 10px;
+}
+.top-container {
+  background-color: #62a3ad8a;
+  padding: 0px;
+  text-align: center;
+}
+.myjumbotron{
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  
+  margin-bottom: 2px;
+}
+
+.header {
+  padding: 0px 20px;
+  background-color: #222;
+  color: #f1f1f1;
+  z-index:9990;
+}
+.navbar{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.navbar-inverse{
+  border-color: #222;
+}
+#lin1{
+  color: white;
+}
+.spacing-for-button{
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.list-group-item{
+  padding: 6px 15px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+

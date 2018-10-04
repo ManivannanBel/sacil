@@ -1,0 +1,42 @@
+
+<?php 
+  
+    $server="118.67.248.12"; 
+    $user="ramsa2018"; 
+    $pass="ram@sona2018"; 
+    $db="sadivclis";
+      
+    // connect to mysql 
+      
+    $conn = mysqli_connect($server, $user, $pass) or die("Sorry, can't connect to the localhost."); 
+    if($conn){
+    	//echo "Connected to $server <br>";
+    }
+      
+    // select the db 
+      
+    $connect_to_db = mysqli_select_db($conn, $db) or die("Sorry, can't select the database."); 
+    if($connect_to_db){
+    	//echo "Connected to $db <br>";
+    }
+  
+//-----------------function to prevent sql injection---------
+    function format_input($s){
+    global $conn;
+    return mysqli_real_escape_string($conn,trim($s));  
+
+}
+//-------------------function to prevent xss----------------------------------------
+   function format_output($s){   
+    return htmlspecialchars(stripcslashes(trim($s)));    
+}
+
+/*function writeLocationToDB($user_id='default',$tbl='unknown',$loc='lat,lon'){
+        global $conn;
+        $sql = "INSERT INTO `user_location` (`id`, `user_id`, `table_name`, `location`, `date_time`)
+                VALUES (NULL, '$user_id', '$tbl', '$loc', now());"
+        $res = mysqli_query($conn,$sql);
+        if($res) return 1;
+        return 0;
+}*/
+?>
