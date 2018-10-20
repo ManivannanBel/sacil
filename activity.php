@@ -111,7 +111,7 @@ body {font-family: "Lato", sans-serif;}
     return strtotime($a) - strtotime($b);
     }
     usort($date_array, "date_sort");
- //   print_r($date_array);
+  //  print_r($date_array);
     if(!empty($_POST['activity_fromdate']))
       $older_date = $_POST['activity_fromdate'];
     else
@@ -121,8 +121,9 @@ body {font-family: "Lato", sans-serif;}
       $newer_date = $_POST['activity_todate'];
     else
       $newer_date = $date_array[sizeof($date_array)-1];
-    
+  
   for ($date = $newer_date; (strtotime($date))>=(strtotime($older_date)); $date=date('Y-m-d',strtotime("-1 day", strtotime($date)))){
+    try{
     $res_cb=mysqli_query($conn,"select * from cb where clis_cms_id='".$_SESSION['loggeduserid_original']."' AND date='".$date."';");
     if($res_cb){
       while ($row=mysqli_fetch_assoc($res_cb)) {
@@ -470,6 +471,9 @@ body {font-family: "Lato", sans-serif;}
         </li>    
       <?php           
       }
+    }
+    }catch(Exception $e){
+      continue;
     }      
   }
 
