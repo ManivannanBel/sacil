@@ -57,6 +57,7 @@ if(isset($_SESSION['loggeduser_original'])){
       <b>ID:</b><?php echo "$usrid";?>
     </p>
     <p><a href="fpinotification.php">FPI Notification</a></p>
+    <p><a href="view_comments.php">Comments</a></p>
     <form method="post">
     <input name = "btn_logout" class=" btn btn-md btn-danger" type="submit" value="Log Out">
 
