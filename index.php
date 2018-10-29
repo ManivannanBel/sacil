@@ -1,18 +1,18 @@
 <html>
 <head>
-	<title>CLI Monitoring</title>
+  <title>CLI Monitoring</title>
   <link rel="shortcut icon" href="reports/pic/logo.ico" />
 
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="Keywords" content="southern,railway,monitoring,cli,clis,sona,daya, dayanand, dayanand raut, sagar, sagar poudel, ragas, raj, raj shikhar, raj shikhar tandukar, aparna, aparna c, aparna chandrasekharan, vishnu, vishu raj, vishnu sivakumar, railway,">
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
-	<link rel="stylesheet" type="text/css" href="footerstyle.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Keywords" content="southern,railway,monitoring,cli,clis,sona,daya, dayanand, dayanand raut, sagar, sagar poudel, ragas, raj, raj shikhar, raj shikhar tandukar, aparna, aparna c, aparna chandrasekharan, vishnu, vishu raj, vishnu sivakumar, railway,">
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+  <link rel="stylesheet" type="text/css" href="footerstyle.css">
   
-	</head>
-	<body onscroll="myFunction()">
+  </head>
+  <body onscroll="myFunction()">
 
 <?php
 //---------------HEADER--------------
@@ -47,6 +47,7 @@ include("header.php");
           <li><a href="various_checks.php">Various Checks</a></li>
           <li><a href="activity_log.php">Activity Log</a></li>
           <li><a href="clis_profile.php">Profile</a></li>
+          <li><a href="add_comments.php">Add comments</a></li>
           
         </ul>
       </div>
@@ -120,7 +121,7 @@ function myFunction() {
           include("footer.php");
 ?>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 </html>
