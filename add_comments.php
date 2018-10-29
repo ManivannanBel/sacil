@@ -3,6 +3,8 @@
 	session_start();
 	include("connect2db.php");
 	if(isset($_POST['submit_comment'])){
+		$create_table_query = "create TABLE if not EXISTS comments (comment varchar(5000), clis_cms_id varchar(20), date timestamp default CURRENT_TIMESTAMP);";
+		$conn->query($create_table_query);
 		$comment = format_input($_POST['comment']);
 		if(!empty($comment)){
 			$clis_id = $_SESSION['loggeduserid_original'];
