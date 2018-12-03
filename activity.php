@@ -115,7 +115,7 @@ body {font-family: "Lato", sans-serif;}
     if(!empty($_POST['activity_fromdate']))
       $older_date = $_POST['activity_fromdate'];
     else
-      $older_date = $date_array[0];
+      $older_date = new DateTime("1/1/2015");
     
     if(!empty($_POST['activity_todate']))
       $newer_date = $_POST['activity_todate'];
